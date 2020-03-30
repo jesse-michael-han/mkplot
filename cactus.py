@@ -16,7 +16,7 @@ from matplotlib import __version__ as mpl_version
 import math
 import numpy as np
 import os
-from plot import Plot
+from .plot import Plot
 import six
 
 
