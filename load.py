@@ -12,10 +12,10 @@
 #==============================================================================
 import csv
 import json
-import statutil
 import six
 import sys
 
+from . import statutil
 
 #
 #==============================================================================
@@ -97,7 +97,11 @@ def load_json(stat_arr, options):
             vals.append(val)
 
         if type(options['legend']) is list:
-            label = ' '.join([stat_obj.preamble[k] for k in options['legend']])
+            try:
+                label = ' '.join([stat_obj.preamble[k] for k in options['legend']])
+            except KeyError:
+                print("UH OH", stat_obj.preamble)
+                raise Exception
         else:
             label = stat_obj.preamble[options['legend']]
 

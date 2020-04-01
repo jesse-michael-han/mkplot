@@ -14,13 +14,14 @@ from __future__ import print_function
 import matplotlib
 matplotlib.use('pdf')  # for not loading GUI modules
 
-from cactus import Cactus
 import getopt
 import json
-from load import load_data
 import os
-from scatter import Scatter
 import sys
+
+from .load import load_data
+from .cactus import Cactus
+from .scatter import Scatter
 
 
 #

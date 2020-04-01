@@ -146,7 +146,7 @@ class StatArray:
         if files is None:
             self.inst_full = []
             self.stat_objs = []
-        elif type(files) is list:
+        elif type(files) is list or type(files) is tuple:
             self.read(files)
         else:
             print('in case of just one file use "Stat" class', file=sys.stderr)

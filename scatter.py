@@ -14,7 +14,7 @@ import json
 import matplotlib.pyplot as plt
 from matplotlib import __version__ as mpl_version
 import numpy as np
-from plot import Plot
+from .plot import Plot
 import six
 from six.moves import range
 
